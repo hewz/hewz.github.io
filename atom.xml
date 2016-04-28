@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Neverland</title>
+  <subtitle>Record my life</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://nobugs.cc/"/>
+  <updated>2016-04-11T09:25:43.638Z</updated>
+  <id>http://nobugs.cc/</id>
+  
+  <author>
+    <name>Weizhe He</name>
+    <email>sz.weizhe@gmail.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ionic默认样式在iOS和Android中的区别</title>
+    <link href="http://nobugs.cc/2016/03/29/ionic-style-issue-on-ios-and-android/"/>
+    <id>http://nobugs.cc/2016/03/29/ionic-style-issue-on-ios-and-android/</id>
+    <published>2016-03-29T04:55:58.000Z</published>
+    <updated>2016-04-11T09:25:43.638Z</updated>
+    
+    <content type="html">&lt;p&gt;ionicframework中Android和iOS在默认样式上有一些不同的地方。&lt;/p&gt;
+&lt;h3 id=&quot;tab位置&quot;&gt;&lt;a href=&quot;#tab位置&quot; class=&quot;headerlink&quot; title=&quot;tab位置&quot;&gt;&lt;/a&gt;tab位置&lt;/h3&gt;&lt;p&gt;Android 默认是顶部(top)，iOS是底部 (bottom)&lt;/p&gt;
+&lt;p&gt;$ionicConfigProvider, tabs.position(value)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://ionicframework.com/docs/api/provider/$ionicConfigProvider/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;标题样式&quot;&gt;&lt;a href=&quot;#标题样式&quot; class=&quot;headerlink&quot; title=&quot;标题样式&quot;&gt;&lt;/a&gt;标题样式&lt;/h3&gt;&lt;p&gt;Android默认靠左边，iOS默认居中&lt;/p&gt;
+&lt;p&gt;navBar.alignTitle(value)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://ionicframework.com/docs/api/provider/$ionicConfigProvider/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ionicframework中Android和iOS在默认样式上有一些不同的地方。&lt;/p&gt;
+&lt;h3 id=&quot;tab位置&quot;&gt;&lt;a href=&quot;#tab位置&quot; class=&quot;headerlink&quot; title=&quot;tab位置&quot;&gt;&lt;/a&gt;tab位置&lt;/h3&gt;&lt;p&gt;Android 默
+    
+    </summary>
+    
+      <category term="Web" scheme="http://nobugs.cc/categories/Web/"/>
+    
+    
+      <category term="ionic" scheme="http://nobugs.cc/tags/ionic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 5.0+ 去除Wifi/4G感叹号</title>
+    <link href="http://nobugs.cc/2015/08/12/remove-android-wifi-4g-exclamation-point/"/>
+    <id>http://nobugs.cc/2015/08/12/remove-android-wifi-4g-exclamation-point/</id>
+    <published>2015-08-12T01:38:56.000Z</published>
+    <updated>2016-04-12T02:10:53.858Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;感叹号来源&quot;&gt;&lt;a href=&quot;#感叹号来源&quot; class=&quot;headerlink&quot; title=&quot;感叹号来源&quot;&gt;&lt;/a&gt;感叹号来源&lt;/h3&gt;&lt;p&gt;Android先访问 &lt;strong&gt;clients3.google.com/generate_204&lt;/strong&gt; 这个网址，会产生一个 http 204 返回值。204返回值的意思就是空内容。如果当前Wifi是需要登录才可以连接，那么当试图访问Google的服务器的时候，Wifi的验证机制一定会自动跳转到一个登录页面，这个时候http请求的返回值就必然不是204了。就是通过这一机制，便可以区分当前Wifi是否需要验证。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由于谷歌被墙，所以去除感叹后就需要禁用检测功能或者换成其它的链接。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;完全屏蔽网络检查功能&quot;&gt;&lt;a href=&quot;#完全屏蔽网络检查功能&quot; class=&quot;headerlink&quot; title=&quot;完全屏蔽网络检查功能&quot;&gt;&lt;/a&gt;完全屏蔽网络检查功能&lt;/h3&gt;&lt;p&gt;最简单快速，但是就没有办法提示wifi登录：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb shell &amp;quot;settings put global captive_portal_detection_enabled 0&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;用国内的服务器替换掉Google的服务器&quot;&gt;&lt;a href=&quot;#用国内的服务器替换掉Google的服务器&quot; class=&quot;headerlink&quot; title=&quot;用国内的服务器替换掉Google的服务器&quot;&gt;&lt;/a&gt;用国内的服务器替换掉Google的服务器&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb shell &amp;quot;settings put global captive_portal_server hewz.cn&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;如何建立自己的服务器&quot;&gt;&lt;a href=&quot;#如何建立自己的服务器&quot; class=&quot;headerlink&quot; title=&quot;如何建立自己的服务器&quot;&gt;&lt;/a&gt;如何建立自己的服务器&lt;/h3&gt;&lt;h3 id=&quot;1-apache&quot;&gt;&lt;a href=&quot;#1-apache&quot; class=&quot;headerlink&quot; title=&quot;1.apache&quot;&gt;&lt;/a&gt;1.apache&lt;/h3&gt;&lt;p&gt;如果你的服务器安装了rewrite模块，那么只需要在网站的.htaccess中加入以下代码：&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;IfModule&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;mod_rewrite.c&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RewriteEngine On&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RewriteCond %&amp;#123;REQUEST_URI&amp;#125; /generate_204$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RewriteRule $ / [R=204]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;IfModule&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;根目录新建generate_204文件，内容：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;?php header(&amp;quot;HTTP/1.1 204 No Content&amp;quot;); ?&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-nginx&quot;&gt;&lt;a href=&quot;#2-nginx&quot; class=&quot;headerlink&quot; title=&quot;2.nginx&quot;&gt;&lt;/a&gt;2.nginx&lt;/h3&gt;&lt;p&gt;直接加入以下设置即可：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;location /generate_204 &amp;#123; return 204; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果以上方法都无效，那么就要利用代码中的一个小trick来完成，直接在网站的根目录下建立一个叫做“generate_204”的空文件即可，因为安卓的源码中写了如果返回的内容为空那么也会当成204（毕竟一个空的页面怎么想都不可能是登录页面嘛！）。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;感叹号来源&quot;&gt;&lt;a href=&quot;#感叹号来源&quot; class=&quot;headerlink&quot; title=&quot;感叹号来源&quot;&gt;&lt;/a&gt;感叹号来源&lt;/h3&gt;&lt;p&gt;Android先访问 &lt;strong&gt;clients3.google.com/generate_204&lt;/stron
+    
+    </summary>
+    
+      <category term="Android" scheme="http://nobugs.cc/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://nobugs.cc/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Moto 360</title>
+    <link href="http://nobugs.cc/2015/04/23/moto-360/"/>
+    <id>http://nobugs.cc/2015/04/23/moto-360/</id>
+    <published>2015-04-23T14:31:57.000Z</published>
+    <updated>2016-04-11T05:29:19.827Z</updated>
+    
+    <content type="html">&lt;p&gt;半个月前海淘的Moto 360到手了。玩了两天，感觉还不错，挺有新鲜感的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;6.2 Update&lt;/p&gt;
+&lt;p&gt;心率模块貌似坏了!!一共也没用几次..&lt;/p&gt;
+&lt;p&gt;可穿戴设备还不成熟, 只能玩玩.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;半个月前海淘的Moto 360到手了。玩了两天，感觉还不错，挺有新鲜感的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;6.2 Update&lt;/p&gt;
+&lt;p&gt;心率模块貌似坏了!!一共也没用几次..&lt;/p&gt;
+&lt;p&gt;可穿戴设备还不成熟, 只能玩玩.&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Life" scheme="http://nobugs.cc/categories/Life/"/>
+    
+    
+      <category term="Moto360" scheme="http://nobugs.cc/tags/Moto360/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>定时自动备份Wordpress数据</title>
+    <link href="http://nobugs.cc/2015/04/15/auto-backup-wordpress/"/>
+    <id>http://nobugs.cc/2015/04/15/auto-backup-wordpress/</id>
+    <published>2015-04-15T03:15:57.000Z</published>
+    <updated>2016-04-11T05:29:19.307Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;1-创建备份脚本&quot;&gt;&lt;a href=&quot;#1-创建备份脚本&quot; class=&quot;headerlink&quot; title=&quot;1.创建备份脚本&quot;&gt;&lt;/a&gt;1.创建备份脚本&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DES_FOLDER=/root/Dropbox/backups&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DAYS_AGO=7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DAY=$((24*3600))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;WEEK=$((7*$DAY))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;NOW=$(date +’%Y-%m-%d’)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;TIME_NOW=$(($(date +%s -d “$(date +’%Y-%m-%d’)”)))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SECONDS_OF_DAYS_AGO=$(($DAYS_AGO * $DAY))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;TIME_AGO=$(($TIME_NOW - $SECONDS_OF_DAYS_AGO))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;function isDaysBefore()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    DATE=$(($(date +%s -d $1)))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    if [[ $DATE &amp;lt; $TIME_AGO ]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        echo 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    else&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        echo 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [ ! -d “$DES_FOLDER” ]; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo mkdir $DES_FOLDER&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    DES_PATH=$DES_FOLDER/$NOW/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [ ! -d “$DES_PATH” ]; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo mkdir $DES_PATH&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;WD_NAME=hewz.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SQL_NAME=mysql.sql.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;tar czf $DES_PATH/$WD_NAME /var/www/html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysqldump -u DBUSER -pPASSWORD wordpress |gzip &amp;gt; $DES_PATH/$SQL_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;for FOLDER in ls $DES_FOLDER; do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;folder_date=expr substr $FOLDER 1 10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [[ $(isDaysBefore $folder_date) == 1 ]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo rm -fr $DES_FOLDER/$FOLDER&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;done&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;参数-u后指定数据库的用户名，-p指定密码。此脚本通过设置DES_FOLDER和DAYS_AGO，可以指定备份目标文件夹和备份有效期。超过有效期的备份将被删除。脚本仅供参考。&lt;/p&gt;
+&lt;h3 id=&quot;2-配置cron，定时备份&quot;&gt;&lt;a href=&quot;#2-配置cron，定时备份&quot; class=&quot;headerlink&quot; title=&quot;2.配置cron，定时备份&quot;&gt;&lt;/a&gt;2.配置cron，定时备份&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vi /etc/crontab&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;加上一行&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;59 2 * * * root bash /root/backup.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;表示每天2点59分自动执行root下backup.sh脚本。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-创建备份脚本&quot;&gt;&lt;a href=&quot;#1-创建备份脚本&quot; class=&quot;headerlink&quot; title=&quot;1.创建备份脚本&quot;&gt;&lt;/a&gt;1.创建备份脚本&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl
+    
+    </summary>
+    
+      <category term="Web" scheme="http://nobugs.cc/categories/Web/"/>
+    
+    
+      <category term="wordpress" scheme="http://nobugs.cc/tags/wordpress/"/>
+    
+      <category term="backup" scheme="http://nobugs.cc/tags/backup/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用Dropbox自动备份网站和数据</title>
+    <link href="http://nobugs.cc/2015/04/15/dropbox-data-backup/"/>
+    <id>http://nobugs.cc/2015/04/15/dropbox-data-backup/</id>
+    <published>2015-04-15T02:56:22.000Z</published>
+    <updated>2016-04-11T05:29:19.567Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;安装-Dropbox-客户端&quot;&gt;&lt;a href=&quot;#安装-Dropbox-客户端&quot; class=&quot;headerlink&quot; title=&quot;安装 Dropbox 客户端&quot;&gt;&lt;/a&gt;安装 Dropbox 客户端&lt;/h3&gt;&lt;p&gt;32位系统:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd ~ &amp;amp;&amp;amp; wget -O - https://www.dropbox.com/download?plat=lnx.x86 | tar xzf -&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;64位系统:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd ~ &amp;amp;&amp;amp; wget -O - “https://www.dropbox.com/download?plat=lnx.x86_64“ | tar xzf -&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;执行结果如下所示：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~# cd ~ &amp;amp;&amp;amp; wget -O - https://www.dropbox.com/download?plat=lnx.x86 | tar xzf -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;–2012-02-22 06:44:40– https://www.dropbox.com/download?plat=lnx.x86&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Resolving www.dropbox.com… 199.47.217.171, 199.47.216.170, 199.47.216.171, …&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Connecting to www.dropbox.com|199.47.217.171|:80… connected.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;HTTP request sent, awaiting response… 302 FOUND&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Location: https://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.2.52.tar.gz [following]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;–2012-02-22 06:44:40– https://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.2.52.tar.gz&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Resolving dl-web.dropbox.com… 107.20.132.92, 107.20.138.135, 107.20.170.126, …&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Connecting to dl-web.dropbox.com|107.20.132.92|:80… connected.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;HTTP request sent, awaiting response… 200 OK&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Length: 15794278 (15M) [application/x-tar]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Saving to: `STDOUT’&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;100%[======================================&amp;gt;] 15,794,278 893K/s in 15s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2012-02-22 06:44:57 (1.01 MB/s) - written to stdout [15794278/15794278]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;看到类似信息，表示安装完成。&lt;/p&gt;
+&lt;h3 id=&quot;设置帐号&quot;&gt;&lt;a href=&quot;#设置帐号&quot; class=&quot;headerlink&quot; title=&quot;设置帐号&quot;&gt;&lt;/a&gt;设置帐号&lt;/h3&gt;&lt;p&gt;首先注册Dropbox账号（需翻墙），用此链接注册Dropbox，可以额外送500M容量。&lt;a href=&quot;https://db.tt/vSkgSO5O&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://db.tt/vSkgSO5O&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;执行如下命令开始设置帐号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;~/.dropbox-dist/dropboxd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;看到这样的提示时&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Please visit https://www.dropbox.com/cli_link?host_id=xxx&amp;amp;cl=en_US to link this machine.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;复制里面https的链接地址使用浏览器打开，会出现Dropbox的密码框，输入你刚刚注册的密码，终端出现如下提示即可完成设置。完成后，使用 Ctrl+C 键中断运行。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Client successfully linked, Welcome xxx!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;开始使用&quot;&gt;&lt;a href=&quot;#开始使用&quot; class=&quot;headerlink&quot; title=&quot;开始使用&quot;&gt;&lt;/a&gt;开始使用&lt;/h3&gt;&lt;p&gt;完成以上设置后，会在当然的目录下出现 Dropbox 目录，这个目录就是同步目录，当在这个目录下放置的任何文件都会同步到 Dropbox 网盘上。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~# ls&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~# cd Dropbox/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~/Dropbox# ls&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Getting Started.pdf Photos Public&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;第一次测试： 在Dropbox目录下创建一个内容为 Hello 的 a.txt 文件。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;echo “Hello” &amp;gt; a.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;运行同步程序&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;~/.dropbox-dist/dropboxd&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;打开Dropbox网页的 Files ，就会看到你的文件了。 输入 Ctrl+C 中断同步，下面开始讲如何配置自动运行同步。&lt;/p&gt;
+&lt;h3 id=&quot;自动运行-Dropbox&quot;&gt;&lt;a href=&quot;#自动运行-Dropbox&quot; class=&quot;headerlink&quot; title=&quot;自动运行 Dropbox&quot;&gt;&lt;/a&gt;自动运行 Dropbox&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;512M内存的VPS请不要自动启动服务，需要时，手工运行即可，启动后会太占内存。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;直接复制下面的命令并执行，以下为创建 dropbox 的自动启动文件，命令内容如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat &amp;lt;&amp;lt; “EOF” &amp;gt; /etc/init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dropbox service&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DAEMON=.dropbox-dist/dropboxd&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;start() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;Starting dropbox...&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [ -x /root/$DAEMON ]; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   HOME=&amp;quot;/root&amp;quot; start-stop-daemon -b -o -c root -S -u root -x /root/$DAEMON&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;stop() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;Stopping dropbox...&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [ -x /root/$DAEMON ]; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    start-stop-daemon -o -c root -K -u root -x /root/$DAEMON&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;status() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dbpid=`pgrep -u root dropboxd`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [ -z $dbpid ]; then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo &amp;quot;dropboxd not running.&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;else&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo &amp;quot;dropboxd running (pid $dbpid)&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;case “$1” in&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;start)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;stop)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;stop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;restart|reload|force-reload)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;stop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;status)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;status&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;echo &amp;quot;Usage: /etc/init.d/dropbox &amp;#123;start|stop|reload|force-reload|restart|status&amp;#125;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;esac&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;EOF&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后继续执行如下命令，设置自动启动 dropbox 同步服务：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;chmod +x /etc/init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;update-rc.d dropbox defaults&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/init.d/dropbox start&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;执行命令的结果如下所示：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~/Dropbox# sed -i “s/\r//“ /etc/init.d/dropbox &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~/Dropbox# chmod +x /etc/init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~/Dropbox# update-rc.d dropbox defaults&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;perl: warning: Setting locale failed.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;perl: warning: Please check that your locale settings:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LANGUAGE = (unset),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LC_ALL = (unset),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;LANG = &amp;quot;zh_CN.UTF-8&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;are supported and installed on your system.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;perl: warning: Falling back to the standard locale (“C”).&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;update-rc.d: warning: /etc/init.d/dropbox missing LSB information&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;update-rc.d: see &amp;lt;http://wiki.debian.org/LSBInitScripts&amp;amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Adding system startup for /etc/init.d/dropbox …&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc0.d/K20dropbox -&amp;gt; ../init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc1.d/K20dropbox -&amp;gt; ../init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc6.d/K20dropbox -&amp;gt; ../init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc2.d/S20dropbox -&amp;gt; ../init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc3.d/S20dropbox -&amp;gt; ../init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc4.d/S20dropbox -&amp;gt; ../init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;/etc/rc5.d/S20dropbox -&amp;gt; ../init.d/dropbox&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;root@241541:~/Dropbox# /etc/init.d/dropbox start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Starting dropbox…&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;现在你的VPS已经可以自动同步 /root/Dropbox 目录下的所有文件了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;安装-Dropbox-客户端&quot;&gt;&lt;a href=&quot;#安装-Dropbox-客户端&quot; class=&quot;headerlink&quot; title=&quot;安装 Dropbox 客户端&quot;&gt;&lt;/a&gt;安装 Dropbox 客户端&lt;/h3&gt;&lt;p&gt;32位系统:&lt;br&gt;&lt;figure clas
+    
+    </summary>
+    
+      <category term="Web" scheme="http://nobugs.cc/categories/Web/"/>
+    
+    
+      <category term="wordpress" scheme="http://nobugs.cc/tags/wordpress/"/>
+    
+      <category term="backup" scheme="http://nobugs.cc/tags/backup/"/>
+    
+      <category term="Dropbox" scheme="http://nobugs.cc/tags/Dropbox/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Wordpress解决设置固定链接后404问题</title>
+    <link href="http://nobugs.cc/2015/04/14/wordpress-permalink-404/"/>
+    <id>http://nobugs.cc/2015/04/14/wordpress-permalink-404/</id>
+    <published>2015-04-14T14:15:31.000Z</published>
+    <updated>2016-04-11T05:29:20.343Z</updated>
+    
+    <content type="html">&lt;p&gt;在Wordpress设置中，设置了固定链接后，发现访问之前的页面都会报404 not found错误。&lt;/p&gt;
+&lt;p&gt;网上的资料千篇一律，现在总结一下(Apache)：&lt;/p&gt;
+&lt;p&gt;1.在Document Root目录下新建.htaccess文件，设置所属用户和组为www-data。&lt;/p&gt;
+&lt;p&gt;2.加载mod_rewrite.so模块。如果是用apt-get install命令安装的apache，目录下是没有http.conf文件的。通过grep -r “rewrite”看到在mods-available中模块存在。输入如下命令启用：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo a2enmod rewrite&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3.修改apache2.conf文件。将/var/www目录的AllowOverwrite设为all。&lt;/p&gt;
+&lt;p&gt;4.最后重启apache服务应该就OK了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Wordpress设置中，设置了固定链接后，发现访问之前的页面都会报404 not found错误。&lt;/p&gt;
+&lt;p&gt;网上的资料千篇一律，现在总结一下(Apache)：&lt;/p&gt;
+&lt;p&gt;1.在Document Root目录下新建.htaccess文件，设置所属用户和组为www
+    
+    </summary>
+    
+      <category term="Web" scheme="http://nobugs.cc/categories/Web/"/>
+    
+    
+      <category term="wordpress" scheme="http://nobugs.cc/tags/wordpress/"/>
+    
+      <category term="permalink" scheme="http://nobugs.cc/tags/permalink/"/>
+    
+      <category term="404" scheme="http://nobugs.cc/tags/404/"/>
+    
+  </entry>
+  
+</feed>
