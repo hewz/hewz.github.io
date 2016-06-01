@@ -41,8 +41,8 @@
   <div id="loading" class="active"></div>
 
   <nav id="menu" class="hide" >
-   <div class="inner">
-  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
   </a>
   <div class="brand-wrap">
@@ -54,37 +54,37 @@
       </hgroup>
     </div>
   </div>
-  <ul class="nav">
+  <ul class="nav flex-col">
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/"  >
             <i class="icon icon-lg icon-home"></i>
             Home
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/archives"  >
             <i class="icon icon-lg icon-archives"></i>
             Archives
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/tags"  >
             <i class="icon icon-lg icon-tags"></i>
             Tags
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="https://github.com/hewz" target="_blank" >
             <i class="icon icon-lg icon-github"></i>
             Github
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="http://www.weibo.com/519910905" target="_blank" >
             <i class="icon icon-lg icon-weibo"></i>
             Weibo
@@ -107,12 +107,23 @@
   <main id="main">
     <header class="header" id="header">
     <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">Moto 360</div>
         
-        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -186,16 +197,24 @@
 
         <div class="post-main">
 
-            <div class="post-content" id="post-content" itemprop="postContent"><p>半个月前海淘的Moto 360到手了。玩了两天，感觉还不错，挺有新鲜感的。</p>
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p>半个月前海淘的Moto 360到手了。玩了两天，感觉还不错，挺有新鲜感的。</p>
 <hr>
 <p>6.2 Update</p>
 <p>心率模块貌似坏了!!一共也没用几次..</p>
 <p>可穿戴设备还不成熟, 只能玩玩.</p>
-</div>
 
+            <blockquote>
+              <p>
+                本文地址：
+                <a href="http://nobugs.cc/2015/04/23/moto-360/" target="_blank" rel="external">http://nobugs.cc/2015/04/23/moto-360/</a>
+              </p>
+              <footer><cite><a href="http://nobugs.cc">@Neverland</a></cite></footer>
+            </blockquote>
+            </div>
             
 <nav class="post-nav flex-row">
-  <div class="flex-col waves-block prev">
+  <div class="flex-col waves-block waves-effect prev">
     
       <a href="/2015/08/12/remove-android-wifi-4g-exclamation-point/" title="Android 5.0+ 去除Wifi/4G感叹号" id="post-prev" class="post-nav-link">
         <i class="icon icon-chevron-left"></i>
@@ -203,7 +222,7 @@
       </a>
     
   </div>
-  <div class="flex-col waves-block next">
+  <div class="flex-col waves-block waves-effect next">
     
       <a href="/2015/04/15/auto-backup-wordpress/" title="定时自动备份Wordpress数据" id="post-next" class="post-nav-link">
         <span class="article-nav-title">下一篇</span>
@@ -254,7 +273,7 @@
     </div>
   </main>
 <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 <script>
 var BLOG_SHARE = {
@@ -305,6 +324,29 @@ var BLOG_SHARE = {
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
 <script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
 
 
 

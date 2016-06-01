@@ -32,8 +32,8 @@
   <div id="loading" class="active"></div>
 
   <nav id="menu" class="hide" >
-   <div class="inner">
-  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
   </a>
   <div class="brand-wrap">
@@ -45,37 +45,37 @@
       </hgroup>
     </div>
   </div>
-  <ul class="nav">
+  <ul class="nav flex-col">
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/"  >
             <i class="icon icon-lg icon-home"></i>
             Home
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/archives"  >
             <i class="icon icon-lg icon-archives"></i>
             Archives
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/tags"  >
             <i class="icon icon-lg icon-tags"></i>
             Tags
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="https://github.com/hewz" target="_blank" >
             <i class="icon icon-lg icon-github"></i>
             Github
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="http://www.weibo.com/519910905" target="_blank" >
             <i class="icon icon-lg icon-weibo"></i>
             Weibo
@@ -98,12 +98,23 @@
   <main id="main">
     <header class="header" id="header">
     <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">利用Dropbox自动备份网站和数据</div>
         
-        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -177,7 +188,8 @@
 
         <div class="post-main">
 
-            <div class="post-content" id="post-content" itemprop="postContent"><h3 id="安装-Dropbox-客户端"><a href="#安装-Dropbox-客户端" class="headerlink" title="安装 Dropbox 客户端"></a>安装 Dropbox 客户端</h3><p>32位系统:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~ &amp;&amp; wget -O - https://www.dropbox.com/download?plat=lnx.x86 | tar xzf -</span><br></pre></td></tr></table></figure></p>
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="安装-Dropbox-客户端"><a href="#安装-Dropbox-客户端" class="headerlink" title="安装 Dropbox 客户端"></a>安装 Dropbox 客户端</h3><p>32位系统:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~ &amp;&amp; wget -O - https://www.dropbox.com/download?plat=lnx.x86 | tar xzf -</span><br></pre></td></tr></table></figure></p>
 <p>64位系统:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~ &amp;&amp; wget -O - “https://www.dropbox.com/download?plat=lnx.x86_64“ | tar xzf -</span><br></pre></td></tr></table></figure></p>
 <p>执行结果如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">root@241541:~# cd ~ &amp;&amp; wget -O - https://www.dropbox.com/download?plat=lnx.x86 | tar xzf -</span><br><span class="line">–2012-02-22 06:44:40– https://www.dropbox.com/download?plat=lnx.x86</span><br><span class="line">Resolving www.dropbox.com… 199.47.217.171, 199.47.216.170, 199.47.216.171, …</span><br><span class="line">Connecting to www.dropbox.com|199.47.217.171|:80… connected.</span><br><span class="line">HTTP request sent, awaiting response… 302 FOUND</span><br><span class="line">Location: https://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.2.52.tar.gz [following]</span><br><span class="line">–2012-02-22 06:44:40– https://dl-web.dropbox.com/u/17/dropbox-lnx.x86-1.2.52.tar.gz</span><br><span class="line">Resolving dl-web.dropbox.com… 107.20.132.92, 107.20.138.135, 107.20.170.126, …</span><br><span class="line">Connecting to dl-web.dropbox.com|107.20.132.92|:80… connected.</span><br><span class="line">HTTP request sent, awaiting response… 200 OK</span><br><span class="line">Length: 15794278 (15M) [application/x-tar]</span><br><span class="line">Saving to: `STDOUT’</span><br><span class="line">100%[======================================&gt;] 15,794,278 893K/s in 15s</span><br><span class="line">2012-02-22 06:44:57 (1.01 MB/s) - written to stdout [15794278/15794278]</span><br></pre></td></tr></table></figure></p>
 <p>看到类似信息，表示安装完成。</p>
@@ -194,11 +206,18 @@
 <p>然后继续执行如下命令，设置自动启动 dropbox 同步服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /etc/init.d/dropbox</span><br><span class="line">update-rc.d dropbox defaults</span><br><span class="line">/etc/init.d/dropbox start</span><br></pre></td></tr></table></figure></p>
 <p>执行命令的结果如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">root@241541:~/Dropbox# sed -i “s/\r//“ /etc/init.d/dropbox </span><br><span class="line">root@241541:~/Dropbox# chmod +x /etc/init.d/dropbox</span><br><span class="line">root@241541:~/Dropbox# update-rc.d dropbox defaults</span><br><span class="line">perl: warning: Setting locale failed.</span><br><span class="line">perl: warning: Please check that your locale settings:</span><br><span class="line">LANGUAGE = (unset),</span><br><span class="line"></span><br><span class="line">LC_ALL = (unset),</span><br><span class="line"></span><br><span class="line">LANG = &quot;zh_CN.UTF-8&quot;</span><br><span class="line"></span><br><span class="line">are supported and installed on your system.</span><br><span class="line">perl: warning: Falling back to the standard locale (“C”).</span><br><span class="line">update-rc.d: warning: /etc/init.d/dropbox missing LSB information</span><br><span class="line">update-rc.d: see &lt;http://wiki.debian.org/LSBInitScripts&amp;gt;</span><br><span class="line">Adding system startup for /etc/init.d/dropbox …</span><br><span class="line">/etc/rc0.d/K20dropbox -&gt; ../init.d/dropbox</span><br><span class="line">/etc/rc1.d/K20dropbox -&gt; ../init.d/dropbox</span><br><span class="line">/etc/rc6.d/K20dropbox -&gt; ../init.d/dropbox</span><br><span class="line">/etc/rc2.d/S20dropbox -&gt; ../init.d/dropbox</span><br><span class="line">/etc/rc3.d/S20dropbox -&gt; ../init.d/dropbox</span><br><span class="line">/etc/rc4.d/S20dropbox -&gt; ../init.d/dropbox</span><br><span class="line">/etc/rc5.d/S20dropbox -&gt; ../init.d/dropbox</span><br><span class="line">root@241541:~/Dropbox# /etc/init.d/dropbox start</span><br><span class="line">Starting dropbox…</span><br></pre></td></tr></table></figure></p>
 <p>现在你的VPS已经可以自动同步 /root/Dropbox 目录下的所有文件了。</p>
-</div>
 
+            <blockquote>
+              <p>
+                本文地址：
+                <a href="http://nobugs.cc/2015/04/15/dropbox-data-backup/" target="_blank" rel="external">http://nobugs.cc/2015/04/15/dropbox-data-backup/</a>
+              </p>
+              <footer><cite><a href="http://nobugs.cc">@Neverland</a></cite></footer>
+            </blockquote>
+            </div>
             
 <nav class="post-nav flex-row">
-  <div class="flex-col waves-block prev">
+  <div class="flex-col waves-block waves-effect prev">
     
       <a href="/2015/04/15/auto-backup-wordpress/" title="定时自动备份Wordpress数据" id="post-prev" class="post-nav-link">
         <i class="icon icon-chevron-left"></i>
@@ -206,7 +225,7 @@
       </a>
     
   </div>
-  <div class="flex-col waves-block next">
+  <div class="flex-col waves-block waves-effect next">
     
       <a href="/2015/04/14/wordpress-permalink-404/" title="Wordpress解决设置固定链接后404问题" id="post-next" class="post-nav-link">
         <span class="article-nav-title">下一篇</span>
@@ -257,7 +276,7 @@
     </div>
   </main>
 <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 <script>
 var BLOG_SHARE = {
@@ -308,6 +327,29 @@ var BLOG_SHARE = {
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
 <script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
 
 
 

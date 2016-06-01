@@ -28,8 +28,8 @@
   <div id="loading" class="active"></div>
 
   <nav id="menu"  >
-   <div class="inner">
-  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+   <div class="inner flex-row-vertical">
+  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
   </a>
   <div class="brand-wrap">
@@ -41,37 +41,37 @@
       </hgroup>
     </div>
   </div>
-  <ul class="nav">
+  <ul class="nav flex-col">
     
-        <li class="waves-block active">
+        <li class="waves-block waves-effect active">
           <a href="/"  >
             <i class="icon icon-lg icon-home"></i>
             Home
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/archives"  >
             <i class="icon icon-lg icon-archives"></i>
             Archives
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="/tags"  >
             <i class="icon icon-lg icon-tags"></i>
             Tags
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="https://github.com/hewz" target="_blank" >
             <i class="icon icon-lg icon-github"></i>
             Github
           </a>
         </li>
     
-        <li class="waves-block">
+        <li class="waves-block waves-effect">
           <a href="http://www.weibo.com/519910905" target="_blank" >
             <i class="icon icon-lg icon-weibo"></i>
             Weibo
@@ -94,12 +94,23 @@
   <main id="main">
     <header class="header" id="header">
     <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">Neverland</div>
         
-        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -115,6 +126,44 @@
     <div class="container body-wrap">
       
   <ul class="post-list">
+  
+    <li class="post-list-item">
+  <article id="post-ikongjian_exp" class="article article-type-post" itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/06/01/ikongjian_exp/">深圳爱空间装修体验</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/爱空间/">爱空间</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/装修/">装修</a></li></ul>
+</div>
+        <time datetime="2016-06-01T02:17:00.000Z" itemprop="datePublished" class="post-tiem">
+  2016-06-01
+</time>
+      </div>
+      <div class="post-content" id="post-content" itemprop="postContent" >
+        
+          <p>五月初打算装修深圳的房子，来回跑了几家装修公司，最后还是选择了爱空间。因为我平时比较忙，而他们口号是解放一代年轻人，省心。</p>
+<h3 id="交订金"><a href="#交订金" class="headerlink" title="交订金"></a>交订金</h3><p>2016年5月22日，第二次去福田爱空间体验馆交了订金。主要是对费用、装修材料、工期等问题进行了确认。另外额外交了一块钱，领了一个枕头兑换券。<br>
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2016/06/01/ikongjian_exp/" class="post-more waves-effect waves-button waves-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
   
     <li class="post-list-item">
   <article id="post-ionic-style-issue-on-ios-and-android" class="article article-type-post" itemprop="blogPost">
@@ -151,7 +200,7 @@
         
       </div>
       <div class="post-footer clearfix">
-        <a href="/2016/03/29/ionic-style-issue-on-ios-and-android/" class="post-more waves-button-light">MORE</a>
+        <a href="/2016/03/29/ionic-style-issue-on-ios-and-android/" class="post-more waves-effect waves-button waves-light">MORE</a>
       </div>
     
 
@@ -187,7 +236,7 @@
           <h3 id="感叹号来源"><a href="#感叹号来源" class="headerlink" title="感叹号来源"></a>感叹号来源</h3><p>Android先访问 <strong>clients3.google.com/generate_204</strong> 这个网址，会产生一个 http 204 返回值。204返回值的意思就是空内容。如果当前Wifi是需要登录才可以连接，那么当试图访问Google的服务器的时候，Wifi的验证机制一定会自动跳转到一个登录页面，这个时候http请求的返回值就必然不是204了。就是通过这一机制，便可以区分当前Wifi是否需要验证。</p>
 <p><strong>由于谷歌被墙，所以去除感叹后就需要禁用检测功能或者换成其它的链接。</strong></p>
 <h3 id="完全屏蔽网络检查功能"><a href="#完全屏蔽网络检查功能" class="headerlink" title="完全屏蔽网络检查功能"></a>完全屏蔽网络检查功能</h3><p>最简单快速，但是就没有办法提示wifi登录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell &quot;settings put global captive_portal_detection_enabled 0&quot;;</span><br></pre></td></tr></table></figure></p>
-<h3 id="用国内的服务器替换掉Google的服务器"><a href="#用国内的服务器替换掉Google的服务器" class="headerlink" title="用国内的服务器替换掉Google的服务器"></a>用国内的服务器替换掉Google的服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell &quot;settings put global captive_portal_server hewz.cn&quot;;</span><br></pre></td></tr></table></figure>
+<h3 id="用国内的服务器替换掉Google的服务器"><a href="#用国内的服务器替换掉Google的服务器" class="headerlink" title="用国内的服务器替换掉Google的服务器"></a>用国内的服务器替换掉Google的服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell &quot;settings put global captive_portal_server nobugs.cc&quot;;</span><br></pre></td></tr></table></figure>
 <h3 id="如何建立自己的服务器"><a href="#如何建立自己的服务器" class="headerlink" title="如何建立自己的服务器"></a>如何建立自己的服务器</h3><h3 id="1-apache"><a href="#1-apache" class="headerlink" title="1.apache"></a>1.apache</h3><p>如果你的服务器安装了rewrite模块，那么只需要在网站的.htaccess中加入以下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">IfModule</span> <span class="attr">mod_rewrite.c</span>&gt;</span></span><br><span class="line">    RewriteEngine On</span><br><span class="line">    RewriteCond %&#123;REQUEST_URI&#125; /generate_204$</span><br><span class="line">    RewriteRule $ / [R=204]</span><br><span class="line"><span class="tag">&lt;/<span class="name">IfModule</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>根目录新建generate_204文件，内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php header(&quot;HTTP/1.1 204 No Content&quot;); ?&gt;</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-nginx"><a href="#2-nginx" class="headerlink" title="2.nginx"></a>2.nginx</h3><p>直接加入以下设置即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">location /generate_204 &#123; return 204; &#125;</span><br></pre></td></tr></table></figure></p>
@@ -196,7 +245,7 @@
         
       </div>
       <div class="post-footer clearfix">
-        <a href="/2015/08/12/remove-android-wifi-4g-exclamation-point/" class="post-more waves-button-light">MORE</a>
+        <a href="/2015/08/12/remove-android-wifi-4g-exclamation-point/" class="post-more waves-effect waves-button waves-light">MORE</a>
       </div>
     
 
@@ -238,7 +287,7 @@
         
       </div>
       <div class="post-footer clearfix">
-        <a href="/2015/04/23/moto-360/" class="post-more waves-button-light">MORE</a>
+        <a href="/2015/04/23/moto-360/" class="post-more waves-effect waves-button waves-light">MORE</a>
       </div>
     
 
@@ -280,7 +329,7 @@
         
       </div>
       <div class="post-footer clearfix">
-        <a href="/2015/04/15/auto-backup-wordpress/" class="post-more waves-button-light">MORE</a>
+        <a href="/2015/04/15/auto-backup-wordpress/" class="post-more waves-effect waves-button waves-light">MORE</a>
       </div>
     
 
@@ -334,7 +383,7 @@
         
       </div>
       <div class="post-footer clearfix">
-        <a href="/2015/04/15/dropbox-data-backup/" class="post-more waves-button-light">MORE</a>
+        <a href="/2015/04/15/dropbox-data-backup/" class="post-more waves-effect waves-button waves-light">MORE</a>
       </div>
     
 
@@ -377,7 +426,7 @@
         
       </div>
       <div class="post-footer clearfix">
-        <a href="/2015/04/14/wordpress-permalink-404/" class="post-more waves-button-light">MORE</a>
+        <a href="/2015/04/14/wordpress-permalink-404/" class="post-more waves-effect waves-button waves-light">MORE</a>
       </div>
     
 
@@ -393,7 +442,7 @@
     </div>
   </main>
 <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 <script>
 var BLOG_SHARE = {
@@ -444,6 +493,29 @@ var BLOG_SHARE = {
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
 <script src="/js/main.js"></script>
+
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<script type="text/template" id="search-tpl">
+<li class="item">
+    <a href="/{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</script>
+
+<script src="/js/search.js"></script>
+
+
 
 
 

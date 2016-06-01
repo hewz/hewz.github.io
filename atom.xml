@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nobugs.cc/"/>
-  <updated>2016-04-11T09:25:43.638Z</updated>
+  <updated>2016-06-01T03:02:55.306Z</updated>
   <id>http://nobugs.cc/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深圳爱空间装修体验</title>
+    <link href="http://nobugs.cc/2016/06/01/ikongjian_exp/"/>
+    <id>http://nobugs.cc/2016/06/01/ikongjian_exp/</id>
+    <published>2016-06-01T02:17:00.000Z</published>
+    <updated>2016-06-01T03:02:55.306Z</updated>
+    
+    <content type="html">&lt;p&gt;五月初打算装修深圳的房子，来回跑了几家装修公司，最后还是选择了爱空间。因为我平时比较忙，而他们口号是解放一代年轻人，省心。&lt;/p&gt;
+&lt;h3 id=&quot;交订金&quot;&gt;&lt;a href=&quot;#交订金&quot; class=&quot;headerlink&quot; title=&quot;交订金&quot;&gt;&lt;/a&gt;交订金&lt;/h3&gt;&lt;p&gt;2016年5月22日，第二次去福田爱空间体验馆交了订金。主要是对费用、装修材料、工期等问题进行了确认。另外额外交了一块钱，领了一个枕头兑换券。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/006fVPCvjw1f4fhc5hacbj30zk0qoadx.jpg&quot; alt=&quot;pre-order&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;量房&quot;&gt;&lt;a href=&quot;#量房&quot; class=&quot;headerlink&quot; title=&quot;量房&quot;&gt;&lt;/a&gt;量房&lt;/h3&gt;&lt;p&gt;2016年5月25日，设计师和装修师傅来量房。我对房屋结构的改动需求不大，只是想把厨房的门换成推拉门，要敲半堵墙。&lt;br&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/006fVPCvjw1f4fgzsgzb8j30qo0zk40q.jpg&quot; alt=&quot;排雷单&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;出图纸报价&quot;&gt;&lt;a href=&quot;#出图纸报价&quot; class=&quot;headerlink&quot; title=&quot;出图纸报价&quot;&gt;&lt;/a&gt;出图纸报价&lt;/h3&gt;&lt;p&gt;2016年5月31日，设计师给我发来了平面设计图和装修报价。问题来了：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;报价里装修面积是按一个奇怪的公式算的，而并不是官网上和之前承诺的按房产证面积计算。设计师给我的回复是因为我敲了半面墙，有赠送面积，所以要按他们的公式来算。&lt;/li&gt;
+&lt;li&gt;因为没有电梯的产生搬运费，费用项目可接受，但是计算方式是按上3层计算的。我房子是2楼，两段楼梯并不是挨在一起的（上半层，走几米，再上半层）。&lt;/li&gt;
+&lt;li&gt;门洞大小不合适（爱空间门都是预先做好的，大小固定）的修改费用由客户承担。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这几处是我感觉明显不合理的地方，然后我跟设计师反馈，他说要跟领导商量。我微信上也直接给深爱卿（听说是深圳爱空间领导）留言了，暂无回复。&lt;br&gt;另外报价单上装修地址和房屋户型都是错的，量房时纤维网等费用也并未出现在报价单上。&lt;br&gt;截至目前，我对爱空间有一分失望了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;五月初打算装修深圳的房子，来回跑了几家装修公司，最后还是选择了爱空间。因为我平时比较忙，而他们口号是解放一代年轻人，省心。&lt;/p&gt;
+&lt;h3 id=&quot;交订金&quot;&gt;&lt;a href=&quot;#交订金&quot; class=&quot;headerlink&quot; title=&quot;交订金&quot;&gt;&lt;/a&gt;交订金&lt;/h3&gt;&lt;p&gt;2016年5月22日，第二次去福田爱空间体验馆交了订金。主要是对费用、装修材料、工期等问题进行了确认。另外额外交了一块钱，领了一个枕头兑换券。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Life" scheme="http://nobugs.cc/categories/Life/"/>
+    
+    
+      <category term="爱空间" scheme="http://nobugs.cc/tags/%E7%88%B1%E7%A9%BA%E9%97%B4/"/>
+    
+      <category term="装修" scheme="http://nobugs.cc/tags/%E8%A3%85%E4%BF%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>ionic默认样式在iOS和Android中的区别</title>
@@ -50,12 +87,12 @@
     <link href="http://nobugs.cc/2015/08/12/remove-android-wifi-4g-exclamation-point/"/>
     <id>http://nobugs.cc/2015/08/12/remove-android-wifi-4g-exclamation-point/</id>
     <published>2015-08-12T01:38:56.000Z</published>
-    <updated>2016-04-12T02:10:53.858Z</updated>
+    <updated>2016-05-17T09:39:47.254Z</updated>
     
     <content type="html">&lt;h3 id=&quot;感叹号来源&quot;&gt;&lt;a href=&quot;#感叹号来源&quot; class=&quot;headerlink&quot; title=&quot;感叹号来源&quot;&gt;&lt;/a&gt;感叹号来源&lt;/h3&gt;&lt;p&gt;Android先访问 &lt;strong&gt;clients3.google.com/generate_204&lt;/strong&gt; 这个网址，会产生一个 http 204 返回值。204返回值的意思就是空内容。如果当前Wifi是需要登录才可以连接，那么当试图访问Google的服务器的时候，Wifi的验证机制一定会自动跳转到一个登录页面，这个时候http请求的返回值就必然不是204了。就是通过这一机制，便可以区分当前Wifi是否需要验证。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;由于谷歌被墙，所以去除感叹后就需要禁用检测功能或者换成其它的链接。&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&quot;完全屏蔽网络检查功能&quot;&gt;&lt;a href=&quot;#完全屏蔽网络检查功能&quot; class=&quot;headerlink&quot; title=&quot;完全屏蔽网络检查功能&quot;&gt;&lt;/a&gt;完全屏蔽网络检查功能&lt;/h3&gt;&lt;p&gt;最简单快速，但是就没有办法提示wifi登录：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb shell &amp;quot;settings put global captive_portal_detection_enabled 0&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&quot;用国内的服务器替换掉Google的服务器&quot;&gt;&lt;a href=&quot;#用国内的服务器替换掉Google的服务器&quot; class=&quot;headerlink&quot; title=&quot;用国内的服务器替换掉Google的服务器&quot;&gt;&lt;/a&gt;用国内的服务器替换掉Google的服务器&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb shell &amp;quot;settings put global captive_portal_server hewz.cn&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;用国内的服务器替换掉Google的服务器&quot;&gt;&lt;a href=&quot;#用国内的服务器替换掉Google的服务器&quot; class=&quot;headerlink&quot; title=&quot;用国内的服务器替换掉Google的服务器&quot;&gt;&lt;/a&gt;用国内的服务器替换掉Google的服务器&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb shell &amp;quot;settings put global captive_portal_server nobugs.cc&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&quot;如何建立自己的服务器&quot;&gt;&lt;a href=&quot;#如何建立自己的服务器&quot; class=&quot;headerlink&quot; title=&quot;如何建立自己的服务器&quot;&gt;&lt;/a&gt;如何建立自己的服务器&lt;/h3&gt;&lt;h3 id=&quot;1-apache&quot;&gt;&lt;a href=&quot;#1-apache&quot; class=&quot;headerlink&quot; title=&quot;1.apache&quot;&gt;&lt;/a&gt;1.apache&lt;/h3&gt;&lt;p&gt;如果你的服务器安装了rewrite模块，那么只需要在网站的.htaccess中加入以下代码：&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;IfModule&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;mod_rewrite.c&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RewriteEngine On&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RewriteCond %&amp;#123;REQUEST_URI&amp;#125; /generate_204$&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    RewriteRule $ / [R=204]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;IfModule&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;根目录新建generate_204文件，内容：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;?php header(&amp;quot;HTTP/1.1 204 No Content&amp;quot;); ?&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h3 id=&quot;2-nginx&quot;&gt;&lt;a href=&quot;#2-nginx&quot; class=&quot;headerlink&quot; title=&quot;2.nginx&quot;&gt;&lt;/a&gt;2.nginx&lt;/h3&gt;&lt;p&gt;直接加入以下设置即可：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;location /generate_204 &amp;#123; return 204; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
